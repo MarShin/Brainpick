@@ -1,5 +1,8 @@
 import React from "react";
-import { TabNavigator, StackNavigator } from "react-navigation";
+import {
+  createBottomTabNavigator,
+  createStackNavigator
+} from "react-navigation";
 import { Icon } from "react-native-elements";
 
 import Home from "../screens/Home";
@@ -8,7 +11,7 @@ import CameraInstructions from "../screens/CameraInstructions";
 import Settings from "../screens/Settings";
 import Me from "../screens/Me";
 
-export const HomeStack = StackNavigator({
+export const HomeStack = createStackNavigator({
   Home: {
     screen: Home,
     navigationOptions: {
@@ -24,7 +27,7 @@ export const HomeStack = StackNavigator({
   }
 });
 
-export const Tabs = TabNavigator({
+export const Tabs = createBottomTabNavigator({
   Feed: {
     screen: HomeStack,
     navigationOptions: {
@@ -45,7 +48,7 @@ export const Tabs = TabNavigator({
   }
 });
 
-export const SettingsStack = StackNavigator({
+export const SettingsStack = createStackNavigator({
   Settings: {
     screen: Settings,
     navigationOptions: {
@@ -54,7 +57,7 @@ export const SettingsStack = StackNavigator({
   }
 });
 
-export const Root = StackNavigator(
+export const Root = createStackNavigator(
   {
     Tabs: {
       screen: Tabs
