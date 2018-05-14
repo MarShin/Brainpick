@@ -1,0 +1,32 @@
+{
+  "settings": {
+    "name": "Martin",
+    "language": "eng",
+    "email": "abc@example.com",
+    "fb_token": "xcvxcvxvc"
+  },
+  "tasks": {
+    "isFetching": false,
+    "taskList": {
+      "Fruit Tagging": {
+        "type": "photo_tagging",
+        "fetch_data": true, //user get data from server
+        "issuer": "MIT",
+        "deadline": "04-04-2018",
+        "reward_per_item": "0.01",
+        "data": [],
+        "instructions": "xxx",
+        "options": ["appel", "orange", "pear"]
+      },
+      "Photo Curation": {
+        "type": "camera",
+        "fetch_data": false, //meaning user send data to server
+        "issuer": "UCB",
+        "deadline": "05-04-2018",
+        "reward_per_item": "0.01",
+        "data": [],
+        "instructions": "xxx"
+      }
+    }
+  }
+}

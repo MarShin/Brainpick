@@ -4,6 +4,9 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 import { Provider } from 'react-redux';
 import store from './config/store';
 import { Root } from './config/routes';
+import { AlertProvider } from './components/Alert';
+
+// import FlatListDemo from './screens/FlatListDemo';
 
 EStyleSheet.build({
   $darkBlue: '#142026',
@@ -26,10 +29,12 @@ EStyleSheet.build({
   //   $outline: 1
 });
 
-// export default () => <Root />;
+// export default () => <FlatListDemo />;
 
 export default () => (
   <Provider store={store}>
-    <Root />
+    <AlertProvider>
+      <Root />
+    </AlertProvider>
   </Provider>
 );
