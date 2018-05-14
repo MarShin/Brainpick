@@ -12,7 +12,7 @@ Please install prettier and eslint plugin in your text editor/IDE before coding 
 ### Setup
 
 ```bash
-$ npm install
+$ yarn add
 ```
 
 ### Run locally
@@ -29,4 +29,4 @@ $ react-native run-ios --simulator="iPhone ios10"
 ~/Library/Android/sdk/tools/emulator -avd Pixel_2_API_23  https://stackoverflow.com/questions/42718973/run-avd-emulator-without-android-studio
 ```
 
-lets setup trello to track todo later if neccessary (a lot of todos)
+Refer to trello (https://trello.com/b/vv7Ngphe/brainpick-app) for tasks breakdown
