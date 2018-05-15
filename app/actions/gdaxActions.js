@@ -3,22 +3,21 @@ const SOCKET_URL = 'wss://ws-feed.gdax.com';
 
 // redux-thunk return unamed function to store
 
-export const initData = () =>
-  function (dispatch) {
-    fetch(`${URL}products`)
-      .then(fetch.throwErrors)
-      .then(res => res.json())
-      .then((json) => {
-        dispatch(setProducts(json));
-        dispatch(connectSocket());
-      })
-      .catch(e => console.error(e.message));
-  };
+export const initData = () => (dispatch) => {
+  fetch(`${URL}products`)
+    .then(fetch.throwErrors)
+    .then(res => res.json())
+    .then((json) => {
+      dispatch(setProducts(json));
+      dispatch(connectSocket());
+    })
+    .catch(e => console.error(e.message));
+};
 
 export const connectSocket = () => {
   const ws = new WebSocket(SOCKET_URL);
 
-  return function (dispatch, getState) {
+  return (dispatch, getState) => {
     ws.onopen = () => {
       const state = getState();
       const product_ids = Object.keys(state.prices).map(k => state.prices[k].id);

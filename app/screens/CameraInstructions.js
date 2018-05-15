@@ -8,19 +8,19 @@ import { Steps } from '../components/Steps';
 const firstTime = true;
 
 class CameraInstructions extends Component {
-    handlePress = () => {
-        console.log('row press');
-        // just go back to the previous stacked screen, no object passed
-        // this.props.navigation.goBack(null);
-    };
+  handlePress = () => {
+    console.log('row press');
+    // just go back to the previous stacked screen, no object passed
+    // this.props.navigation.goBack(null);
+  };
 
-    render() {
-        return (
-            <Steps />
-            // <View style={{ flex: 1 }}>
-            //     <StatusBar translucent={false} barStyle="default" />
-            // </View>
-        );
-    }
+  render() {
+    return (
+      <Steps />
+      // <View style={{ flex: 1 }}>
+      //     <StatusBar translucent={false} barStyle="default" />
+      // </View>
+    );
+  }
 }
 export default CameraInstructions;

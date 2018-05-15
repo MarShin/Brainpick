@@ -20,9 +20,7 @@ EStyleSheet.build({
   $regularGray: '#565656',
   $lightGray: '#8C8C8C',
   $paleGray: '#C0C0C0',
-
   $white: '#FFFFFF',
-
   $border: '#979797',
   $inputText: '#797979',
   //   $outline: 1
