@@ -6,9 +6,9 @@ import { Container } from '../components/Container';
 
 import { TaskContainer } from '../components/TaskContainer';
 
-class Home extends Component {
+class Discover extends Component {
   static propTypes = {
-    navigation: PropTypes.object,
+    navigation: PropTypes.object
   };
 
   render() {
@@ -21,4 +21,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default Discover;
