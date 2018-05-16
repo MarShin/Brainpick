@@ -1,16 +1,25 @@
 import React, { Component } from 'react';
 import { View, ScrollView, Image, Text } from 'react-native';
+import PropTypes from 'prop-types';
+
 import { Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { connectAlert } from '../Alert';
 
 import styles from './styles';
 
 const title = 'Photograph Common Objects';
 const instructions =
   'you wil blablabla blablabla sdfsdf blablabla blablabla blablabla blablabla blablabla';
+
 class Steps extends Component {
+  static propTypes = {
+    navigation: PropTypes.object,
+    alertWithType: PropTypes.func
+  };
   handlePressStart = () => {
-    console.log('press site');
+    this.props.navigation.goBack(null);
+    // this.props.alertWithType('error', 'Sorry!', "You can't proceed now");
   };
 
   render() {
@@ -24,10 +33,14 @@ class Steps extends Component {
             resizeMode="contain"
           />
           <Text style={styles.instructions}>{instructions}</Text>
-          <Button icon={<Icon name="arrow-right" size={15} color="white" />} title="Understand!" />
+          <Button
+            icon={<Icon name="arrow-right" size={15} color="white" />}
+            title="Understand!"
+            onPress={this.handlePressStart}
+          />
         </ScrollView>
       </View>
     );
   }
 }
-export default Steps;
+export default connectAlert(Steps);

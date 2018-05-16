@@ -16,7 +16,7 @@ class CameraInstructions extends Component {
 
   render() {
     return (
-      <Steps />
+      <Steps navigation={this.props.navigation} />
       // <View style={{ flex: 1 }}>
       //     <StatusBar translucent={false} barStyle="default" />
       // </View>
