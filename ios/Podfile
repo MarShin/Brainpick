@@ -1,0 +1,30 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '10.3'
+
+target 'Brainpick' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for Brainpick
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+
+  target 'BrainpickTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+
+target 'Brainpick-tvOS' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for Brainpick-tvOS
+
+  target 'Brainpick-tvOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import store from './config/store';
 import { Root } from './config/routes';
 import { AlertProvider } from './components/Alert';
+import firebase from 'react-native-firebase';
 
 // import FlatListDemo from './screens/FlatListDemo';
 
