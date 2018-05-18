@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 import { ScrollView } from 'react-native';
 import { Tile, List, ListItem, Button } from 'react-native-elements';
+import PropTypes from 'prop-types';
+
 import { me } from '../config/data';
 
 class Me extends Component {
+  static propTypes = {
+    navigation: PropTypes.object
+  };
+
   handleSettingsPress = () => {
     this.props.navigation.navigate('Settings');
   };

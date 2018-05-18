@@ -1,3 +1,6 @@
+/* eslint-disable react/prefer-stateless-function */
+// TODO: Contribution page, this is just a mockup
+
 import React, { Component } from 'react';
 import { StatusBar, Text } from 'react-native';
 
