@@ -52,10 +52,6 @@ bin/
 gen/
 out/
 
-# Gradle files
-.gradle/
-build/
-
 # Local configuration file (sdk path, etc)
 local.properties
 
@@ -73,11 +69,7 @@ captures/
 
 # Intellij
 *.iml
-.idea/workspace.xml
-.idea/tasks.xml
-.idea/gradle.xml
-.idea/dictionaries
-.idea/libraries
+.idea
 
 # External native build folder generated in Android Studio 2.2 and later
 .externalNativeBuild
@@ -229,5 +221,9 @@ xcuserdata/
 !.vscode/extensions.json
 .history
 
-
 # End of https://www.gitignore.io/api/reactnative,visualstudiocode
+
+# RNFirebase specific
+/ios/Pods/
+google-services.json
+GoogleService-Info.plist

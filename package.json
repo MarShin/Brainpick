@@ -7,6 +7,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "fbjs": "^0.8.16",
     "hoist-non-react-statics": "^2.5.0",
     "prop-types": "^15.6.1",
     "react": "16.3.2",
@@ -14,7 +15,8 @@
     "react-native-dropdownalert": "^3.4.0",
     "react-native-elements": "^0.19.1",
     "react-native-extended-stylesheet": "^0.8.1",
-    "react-native-vector-icons": "^4.6.0",
+    "react-native-firebase": "^4.1.0",
+    "react-native-vector-icons": "^4.4.0",
     "react-navigation": "^2.0.1",
     "react-navigation-material-bottom-tabs": "^0.1.2",
     "react-redux": "^5.0.7",

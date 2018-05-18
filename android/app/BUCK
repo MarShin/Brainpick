@@ -45,12 +45,12 @@ android_library(
 
 android_build_config(
     name = "build_config",
-    package = "com.brainpick",
+    package = "com.martin.brainpick",
 )
 
 android_resource(
     name = "res",
-    package = "com.brainpick",
+    package = "com.martin.brainpick",
     res = "src/main/res",
 )
 
