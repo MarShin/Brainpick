@@ -5,7 +5,6 @@ import { Steps } from '../components/Steps';
 // const ICON_PREFIX = Platform.OS === 'ios' ? 'ios' : 'md';
 // const ICON_COLOR = '#868686';
 // const ICON_SIZE = 23;
-const firstTime = true;
 
 class CameraInstructions extends Component {
   handlePress = () => {

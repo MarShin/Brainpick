@@ -10,12 +10,12 @@ class Settings extends Component {
     return (
       <ScrollView>
         <List>
-          <ListItem title="Notifications" />
-          <ListItem title="Profile" />
-          <ListItem title="Password" />
+          <ListItem title="Notifications" hideChevron />
+          <ListItem title="Profile" hideChevron />
+          <ListItem title="Password" hideChevron />
         </List>
         <List>
-          <ListItem title="Sign Out" rightIcon={{ name: 'cancel' }} />
+          <ListItem title="Sign Out" rightIcon={{ name: 'cancel' }} hideChevron />
         </List>
       </ScrollView>
     );

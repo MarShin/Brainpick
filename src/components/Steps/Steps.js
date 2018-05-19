@@ -3,7 +3,7 @@ import { View, ScrollView, Image, Text } from 'react-native';
 import PropTypes from 'prop-types';
 
 import { Button } from 'react-native-elements';
-import Icon from 'react-native-vector-icons/FontAwesome';
+// import Icon from 'react-native-vector-icons/FontAwesome';
 import { connectAlert } from '../Alert';
 
 import styles from './styles';
@@ -34,7 +34,7 @@ class Steps extends Component {
           />
           <Text style={styles.instructions}>{instructions}</Text>
           <Button
-            icon={<Icon name="arrow-right" size={15} color="white" />}
+            // icon={<Icon name="arrow-right" type="feather" size={15} color="white" />}
             title="Understand!"
             onPress={this.handlePressStart}
           />

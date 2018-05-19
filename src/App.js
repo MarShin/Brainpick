@@ -5,7 +5,6 @@ import { Provider } from 'react-redux';
 import store from './config/store';
 import { Root } from './config/routes';
 import { AlertProvider } from './components/Alert';
-import firebase from 'react-native-firebase';
 
 // import FlatListDemo from './screens/FlatListDemo';
 
@@ -26,7 +25,7 @@ EStyleSheet.build({
   $paleGray: '#C0C0C0',
   $white: '#FFFFFF',
   $border: '#979797',
-  $inputText: '#797979',
+  $inputText: '#797979'
   //   $outline: 1
 });
 
