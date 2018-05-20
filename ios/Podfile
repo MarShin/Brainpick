@@ -10,13 +10,13 @@ target 'Brainpick' do
   # Required by RNFirebase
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
 
   # [OPTIONAL PODS] - comment out pods for firebase products you won't be using.
   # pod 'Firebase/AdMob'
   # pod 'Firebase/Database'
   # pod 'Firebase/DynamicLinks'
   # pod 'Firebase/Performance'
-  # pod 'Firebase/Firestore'
   # pod 'Firebase/Messaging'
   # pod 'Firebase/RemoteConfig'
   # pod 'Firebase/Storage'
