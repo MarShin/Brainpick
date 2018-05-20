@@ -8,7 +8,7 @@ target 'Brainpick' do
   # Pods for Brainpick
 
   # Required by RNFirebase
-  pod 'Firebase/Core', '~> 4.13.0'
+  pod 'Firebase/Core'
   pod 'Firebase/Auth'
 
   # [OPTIONAL PODS] - comment out pods for firebase products you won't be using.
