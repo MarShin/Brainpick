@@ -52,13 +52,15 @@ The official Starter kit ReadMe availble [here](https://github.com/invertase/rea
 * 1.4) **[iOS]** `cd ios` and run `pod install` - if you don't have CocoaPods you can follow [these instructions](https://guides.cocoapods.org/using/getting-started.html#getting-started) to install it.
 * 1.5) **[Android]** No additional steps for android here.
 
-#### 2) Add `Google Services` files (plist & JSON)
+#### 2) Part 2 renaming not need for our project
+
+#### 3) Add `Google Services` files (plist & JSON)
 
 * 3.0)**[ORIGINALLY IF SETUP FROM SCRATCH]** **[iOS]** Follow the `add firebase to your app` instructions [here](https://firebase.google.com/docs/ios/setup#add_firebase_to_your_app) to generate your `GoogleService-Info.plist` file if you haven't done so already - use the package name generated previously as your `iOS bundle ID`.
-* 3.1) **[iOS]** Since I already did the integration, just get the `.plist` file from our `Brainpick` drive (https://drive.google.com/file/d/1HqgPHKBFFnoJlcawFJ9RiL4L-DyY6UD0/view?usp=sharing)
-* 3.2) **[iOS]** Place this file in the `ios/` directory of your project.
-* 3.3) **[Android]** Follow the `manually add firebase` to your app instructions [here](https://firebase.google.com/docs/android/setup#manually_add_firebase) to generate your `google-services.json` file if you haven't done so already - use the package name generated previously as your `Android package name`.
-* 3.4) Place this file in the `android/app/` directory of your project.
+* 3.1) **[iOS]** Since I already did the integration, just verify the `.plist` file is in the `ios/` folder, linked in XCode. If you happen to delete it / start from new codebase just get it from `Brainpick` drive (https://drive.google.com/file/d/1HqgPHKBFFnoJlcawFJ9RiL4L-DyY6UD0/view?usp=sharing) - basically contain API KEY & other info
+
+* 3.2) **[Android]** Follow the `manually add firebase` to your app instructions [here](https://firebase.google.com/docs/android/setup#manually_add_firebase) to generate your `google-services.json` file if you haven't done so already - use the package name generated previously as your `Android package name`.
+* 3.3) Place this file in the `android/app/` directory of your project.
 
 #### 4) Start your app
 * can follow below or just run `react-native run-ios` like how we usually do.
