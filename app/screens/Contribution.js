@@ -1,17 +1,14 @@
-import React, { Component } from 'react';
+// @flow
+import * as React from 'react';
 import { StatusBar, Text } from 'react-native';
 
-import { Container } from '../components/Container';
+import Container from '../components/Container';
 
-class Contribution extends Component {
-  render() {
-    return (
-      <Container>
-        <StatusBar translucent={false} barStyle="dark-content" />
-        <Text> coming soon </Text>
-      </Container>
-    );
-  }
-}
+const Contributions = () => (
+  <Container>
+    <StatusBar barStyle="dark-content" />
+    <Text> coming soon </Text>
+  </Container>
+);
 
-export default Contribution;
+export default Contributions;

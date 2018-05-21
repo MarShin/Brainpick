@@ -1,23 +1,23 @@
 /* eslint-disable react/prefer-stateless-function */
 import React, { Component } from 'react';
 import { StatusBar } from 'react-native';
-import PropTypes from 'prop-types';
 
-import { Container } from '../components/Container';
+import Background from '../components/Background/';
+import DiscoverHeader from '../components/DiscoverHeader';
+import TaskList from '../components/TaskList';
 
-import { TaskContainer } from '../components/TaskContainer';
+type Props = {
+  navigation: any
+};
 
-class Discover extends Component {
-  static propTypes = {
-    navigation: PropTypes.object
-  };
-
+class Discover extends Component<Props> {
   render() {
     return (
-      <Container>
-        <StatusBar translucent={false} barStyle="dark-content" />
-        <TaskContainer navigation={this.props.navigation} />
-      </Container>
+      <Background backgroundColor="#F5F8FA">
+        <StatusBar backgroundColor="#F5F8FA" translucent />
+        <DiscoverHeader />
+        <TaskList />
+      </Background>
     );
   }
 }

@@ -6,8 +6,6 @@ import store from './config/store';
 import { Root } from './config/routes';
 import { AlertProvider } from './components/Alert';
 
-// import FlatListDemo from './screens/FlatListDemo';
-
 EStyleSheet.build({
   $darkBlue: '#142026',
   $regularBlue: '#22455B',
@@ -25,11 +23,8 @@ EStyleSheet.build({
   $paleGray: '#C0C0C0',
   $white: '#FFFFFF',
   $border: '#979797',
-  $inputText: '#797979',
-  //   $outline: 1
+  $inputText: '#797979'
 });
-
-// export default () => <FlatListDemo />;
 
 export default () => (
   <Provider store={store}>

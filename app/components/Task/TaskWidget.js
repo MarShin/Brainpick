@@ -1,5 +1,4 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import * as React from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 
 import styles from './styles';
@@ -9,7 +8,11 @@ const description =
   'Choose an object from the list and take a high quality photo of it - but only photos meeting our standards will be paid out!';
 const price = 'Up to $0.5 per approved photo';
 
-class ClearButton extends Component {
+type Props = {
+  onPress: () => void
+};
+
+class ClearButton extends React.Component<Props> {
   handleSmth = () => {
     console.log('haha');
   };
@@ -26,9 +29,5 @@ class ClearButton extends Component {
     );
   }
 }
-
-ClearButton.propTypes = {
-  onPress: PropTypes.func,
-};
 
 export default ClearButton;

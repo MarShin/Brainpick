@@ -1,5 +1,5 @@
 import React from 'react';
-import { createBottomTabNavigator, createStackNavigator } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation';
 import createMaterialBottomTabNavigator from 'react-navigation-material-bottom-tabs/createMaterialBottomTabNavigator';
 import { Icon } from 'react-native-elements';
 
@@ -27,29 +27,37 @@ export const DiscoverStack = createStackNavigator({
   }
 });
 
+type TabBarIconProps = { tintColor: string };
+
 export const Tabs = createMaterialBottomTabNavigator(
   {
     Discover: {
       screen: DiscoverStack,
       navigationOptions: {
         tabBarLabel: 'Discover',
-        tabBarIcon: ({ tintColor }) => <Icon name="list" size={35} color={tintColor} />,
+        tabBarIcon: ({ tintColor }: TabBarIconProps) => (
+          <Icon name="list" size={24} color={tintColor} />
+        ),
         tabBarColor: '#374B57'
       }
     },
     Contribution: {
       screen: Contribution,
       navigationOptions: {
-        tabBarLabel: 'Me',
-        tabBarIcon: ({ tintColor }) => <Icon name="account-balance" size={35} color={tintColor} />,
+        tabBarLabel: 'Contributions',
+        tabBarIcon: ({ tintColor }: TabBarIconProps) => (
+          <Icon name="account-balance" size={24} color={tintColor} />
+        ),
         tabBarColor: '#374B57'
       }
     },
-    Me: {
+    Settings: {
       screen: Me,
       navigationOptions: {
-        tabBarLabel: 'Me',
-        tabBarIcon: ({ tintColor }) => <Icon name="settings" size={35} color={tintColor} />,
+        tabBarLabel: 'Settings',
+        tabBarIcon: ({ tintColor }: TabBarIconProps) => (
+          <Icon name="settings" size={24} color={tintColor} />
+        ),
         tabBarColor: '#374B57'
       }
     }
