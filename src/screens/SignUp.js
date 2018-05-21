@@ -14,7 +14,7 @@ export default class SignUp extends Component {
     const { email, password } = this.state;
     firebase
       .auth()
-      .createUserWithEmailAndPassword(email, password)
+      .createUserAndRetrieveDataWithEmailAndPassword(email, password)
       .then(user => this.props.navigation.navigate('AppStack'))
       .catch(error => this.setState({ errorMessage: error.message }));
   };
@@ -22,7 +22,7 @@ export default class SignUp extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Sign Up</Text>
+        <Text>Sign Up Now!</Text>
         {this.state.errorMessage && <Text style={{ color: 'red' }}>{this.state.errorMessage}</Text>}
         <TextInput
           placeholder="Email"
