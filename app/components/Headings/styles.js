@@ -3,13 +3,15 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 
 export default EStyleSheet.create({
   page: {
-    color: '#5D5D5D',
+    color: '#4a4a4a',
     fontSize: 32,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    paddingTop: 6,
+    paddingHorizontal: 16
   },
   section: {
-    color: '#5D5D5D',
-    fontSize: 24,
+    color: '#757575',
+    fontSize: 22,
     fontWeight: 'bold',
     paddingTop: 12,
     paddingHorizontal: 16,

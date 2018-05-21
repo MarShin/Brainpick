@@ -9,7 +9,7 @@ import CameraInstructions from '../screens/CameraInstructions';
 import Settings from '../screens/Settings';
 import Me from '../screens/Me';
 
-import Contribution from '../screens/Contribution';
+import Contributions from '../screens/Contributions';
 
 export const DiscoverStack = createStackNavigator({
   Discover: {
@@ -42,7 +42,7 @@ export const Tabs = createMaterialBottomTabNavigator(
       }
     },
     Contribution: {
-      screen: Contribution,
+      screen: Contributions,
       navigationOptions: {
         tabBarLabel: 'Contributions',
         tabBarIcon: ({ tintColor }: TabBarIconProps) => (
