@@ -16,7 +16,8 @@ export default (state = initialState, action) => {
       return {
         ...state,
         isFetching: false,
-        lastFetched: action.receivedAt
+        lastFetched: action.receivedAt,
+        tasks: action.tasks
       };
 
     default:

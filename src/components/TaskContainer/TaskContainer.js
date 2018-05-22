@@ -60,7 +60,7 @@ class TaskContainer extends Component {
   };
 
   render() {
-    console.log('firestore task collection', this.state.tasks);
+    // console.log('firestore task collection', this.state.tasks);
     return (
       <View style={styles.container}>
         <TaskWidget onPress={this.handleTaskSelect} />
