@@ -18,25 +18,25 @@ export default EStyleSheet.create({
     // shadowColor: '$paleGray',
     // shadowOffset: { width: 10, height: 10 },
     shadowColor: '$paleGray',
-    shadowOpacity: 0.5,
+    shadowOpacity: 0.5
   },
   button: {
     width: '100%',
-    padding: 20,
+    padding: 20
   },
   title: {
     color: '$darkGray',
     fontSize: 15,
-    fontWeight: '500',
+    fontWeight: '500'
   },
   description: {
     color: '$lightBlue',
     fontSize: 12,
-    fontWeight: '200',
+    fontWeight: '200'
   },
   price: {
     color: '$regularBlue',
     fontSize: 8,
-    fontWeight: '100',
-  },
+    fontWeight: '100'
+  }
 });
