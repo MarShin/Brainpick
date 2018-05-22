@@ -1,4 +1,3 @@
-/* eslint-disable react/prefer-stateless-function */
 import React, { Component } from 'react';
 import { StatusBar } from 'react-native';
 import PropTypes from 'prop-types';
@@ -28,11 +27,5 @@ class Discover extends Component {
     );
   }
 }
-
-// const mapStateToProps = state => ({
-//   baseCurrency: state.currencies.baseCurrency,
-//   quoteCurrency: state.currencies.quoteCurrency,
-//   primaryColor: state.theme.primaryColor,
-// });
 
 export default connect(state => state)(Discover);

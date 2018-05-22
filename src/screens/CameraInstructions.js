@@ -14,12 +14,7 @@ class CameraInstructions extends Component {
   };
 
   render() {
-    return (
-      <Steps navigation={this.props.navigation} />
-      // <View style={{ flex: 1 }}>
-      //     <StatusBar translucent={false} barStyle="default" />
-      // </View>
-    );
+    return <Steps navigation={this.props.navigation} />;
   }
 }
 export default CameraInstructions;
