@@ -3,6 +3,11 @@ package com.brainpick.app;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import org.reactnative.camera.RNCameraPackage;
+import com.futurice.rctaudiotoolkit.AudioPackage;
+import com.wix.reactnativenotifications.RNNotificationsPackage;
+import com.wix.RNCameraKit.RNCameraKitPackage;
+import com.rnim.rn.audio.ReactNativeAudioPackage;
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import io.invertase.firebase.RNFirebasePackage;
@@ -42,6 +47,11 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
         new MainReactPackage(),
+            new RNCameraPackage(),
+            new AudioPackage(),
+            new RNNotificationsPackage(),
+            new RNCameraKitPackage(),
+            new ReactNativeAudioPackage(),
             new SplashScreenReactPackage(),
             new VectorIconsPackage(),
             new RNFirebasePackage(),

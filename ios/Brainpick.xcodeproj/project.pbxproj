@@ -42,6 +42,7 @@
 		C354DC2320B4196800834B5A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C354DBFB20B4196800834B5A /* GoogleService-Info.plist */; };
 		C354DC2420B4196800834B5A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C354DBFB20B4196800834B5A /* GoogleService-Info.plist */; };
 		C9D8AA1A62514A87AB9B66D1 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D963D744E0624A29AEDA7BF8 /* FBSDKCoreKit.framework */; };
+		D260073CD0024FAA8B9EFD31 /* libReactNativeAudioToolkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB701FBEACC948C5AE8FE22E /* libReactNativeAudioToolkit.a */; };
 		E1DA944B02E945EBB18764D3 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7461800ADE44ACD8D49B6C6 /* SimpleLineIcons.ttf */; };
 		E6C21AD6305C4E8DACA699D7 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46ACA482F6B4417CAF9FB266 /* Octicons.ttf */; };
 		EC658D101681421D8B679D05 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E60CD57573C44B79C915B72 /* MaterialCommunityIcons.ttf */; };
@@ -314,6 +315,13 @@
 			remoteGlobalIDString = 358F4ED71D1E81A9004DF814;
 			remoteInfo = RCTBlob;
 		};
+		C317466920B68142005A7701 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B5914E38FDE44DE9729801A /* ReactNativeAudioToolkit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5E8FD9831D269F5D00CF68CC;
+			remoteInfo = ReactNativeAudioToolkit;
+		};
 		C3460C4720B547E7004F2601 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 428CF729992E48018ECAA3FC /* RCTFBSDK.xcodeproj */;
@@ -360,6 +368,7 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Brainpick/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Brainpick/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		1B5914E38FDE44DE9729801A /* ReactNativeAudioToolkit.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeAudioToolkit.xcodeproj; path = "../node_modules/react-native-audio-toolkit/ios/ReactNativeAudioToolkit/ReactNativeAudioToolkit.xcodeproj"; sourceTree = "<group>"; };
 		22B53BC44D814300A837C02E /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		2CF072D063B9406E8A09AE32 /* libRCTFBSDK.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTFBSDK.a; sourceTree = "<group>"; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -381,9 +390,12 @@
 		B15B99C89BA3D8EB3F6DB557 /* Pods-Brainpick.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brainpick.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Brainpick/Pods-Brainpick.debug.xcconfig"; sourceTree = "<group>"; };
 		BAB3EC49ED0B5B138E5401A4 /* Pods-Brainpick.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brainpick.release.xcconfig"; path = "Pods/Target Support Files/Pods-Brainpick/Pods-Brainpick.release.xcconfig"; sourceTree = "<group>"; };
 		C308388DB0F94386977D5A31 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
+		C317468D20B6859A005A7701 /* libReactNativeCameraKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReactNativeCameraKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C31746B820B685A2005A7701 /* libReactNativeCameraKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReactNativeCameraKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C354DBFB20B4196800834B5A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D7D0A33FAA8B46B7806CB57C /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
 		D963D744E0624A29AEDA7BF8 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ./ios/Frameworks/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		DB701FBEACC948C5AE8FE22E /* libReactNativeAudioToolkit.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libReactNativeAudioToolkit.a; sourceTree = "<group>"; };
 		E7461800ADE44ACD8D49B6C6 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		F5285FD51F114063AB01DC09 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -421,6 +433,7 @@
 				C9D8AA1A62514A87AB9B66D1 /* FBSDKCoreKit.framework in Frameworks */,
 				16C8185DBB93468EB6B22FB9 /* FBSDKShareKit.framework in Frameworks */,
 				B53D9315367345AEAB4D87DF /* FBSDKLoginKit.framework in Frameworks */,
+				D260073CD0024FAA8B9EFD31 /* libReactNativeAudioToolkit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,6 +578,8 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C31746B820B685A2005A7701 /* libReactNativeCameraKit.a */,
+				C317468D20B6859A005A7701 /* libReactNativeCameraKit.a */,
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
 				049EAACFF0AF6D821EB9FF37 /* libPods-Brainpick.a */,
 				D963D744E0624A29AEDA7BF8 /* FBSDKCoreKit.framework */,
@@ -610,6 +625,7 @@
 				D7D0A33FAA8B46B7806CB57C /* RNVectorIcons.xcodeproj */,
 				446BE718C66B40688F300F09 /* RNFirebase.xcodeproj */,
 				428CF729992E48018ECAA3FC /* RCTFBSDK.xcodeproj */,
+				1B5914E38FDE44DE9729801A /* ReactNativeAudioToolkit.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -658,6 +674,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		C317464020B68142005A7701 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C317466A20B68142005A7701 /* libReactNativeAudioToolkit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		C3460C4420B547E6004F2601 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -672,6 +696,7 @@
 				09A25D64DF8A47D19050F757 /* libRNVectorIcons.a */,
 				669F65039B424716994A44D0 /* libRNFirebase.a */,
 				2CF072D063B9406E8A09AE32 /* libRCTFBSDK.a */,
+				DB701FBEACC948C5AE8FE22E /* libReactNativeAudioToolkit.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -825,6 +850,10 @@
 				{
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+				},
+				{
+					ProductGroup = C317464020B68142005A7701 /* Products */;
+					ProjectRef = 1B5914E38FDE44DE9729801A /* ReactNativeAudioToolkit.xcodeproj */;
 				},
 				{
 					ProductGroup = C3B8CC8D20B408B3002D4C6B /* Products */;
@@ -1103,6 +1132,13 @@
 			remoteRef = ADBDB9261DFEBF0700ED6528 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		C317466A20B68142005A7701 /* libReactNativeAudioToolkit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libReactNativeAudioToolkit.a;
+			remoteRef = C317466920B68142005A7701 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		C3460C4820B547E7004F2601 /* libRCTFBSDK.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1272,12 +1308,14 @@
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 					"$(SRCROOT)/../node_modules/react-native-fbsdk/ios/RCTFBSDK/**",
+					"$(SRCROOT)/../node_modules/react-native-audio-toolkit/ios/ReactNativeAudioToolkit/**",
 				);
 				INFOPLIST_FILE = BrainpickTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1309,12 +1347,14 @@
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 					"$(SRCROOT)/../node_modules/react-native-fbsdk/ios/RCTFBSDK/**",
+					"$(SRCROOT)/../node_modules/react-native-audio-toolkit/ios/ReactNativeAudioToolkit/**",
 				);
 				INFOPLIST_FILE = BrainpickTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1346,6 +1386,7 @@
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 					"$(SRCROOT)/../node_modules/react-native-fbsdk/ios/RCTFBSDK/**",
+					"$(SRCROOT)/../node_modules/react-native-audio-toolkit/ios/ReactNativeAudioToolkit/**",
 				);
 				INFOPLIST_FILE = Brainpick/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1376,6 +1417,7 @@
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
 					"$(SRCROOT)/../node_modules/react-native-fbsdk/ios/RCTFBSDK/**",
+					"$(SRCROOT)/../node_modules/react-native-audio-toolkit/ios/ReactNativeAudioToolkit/**",
 				);
 				INFOPLIST_FILE = Brainpick/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

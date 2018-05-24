@@ -1,7 +1,13 @@
 // @flow
 import * as React from 'react';
 import { View } from 'react-native';
-import { Card, CardContent, CardCover, Title, Paragraph } from 'react-native-paper';
+import {
+  Card,
+  CardContent,
+  CardCover,
+  Title,
+  Paragraph
+} from 'react-native-paper';
 
 type Props = { children: React.Node };
 
@@ -12,7 +18,6 @@ const LatestTaskItem = ({ children }: Props) => (
         <Title>{children}</Title>
         <Paragraph>Card content</Paragraph>
       </CardContent>
-      <CardCover style={{ width: 120, height: 90 }} source={{ uri: 'https://picsum.photos/700' }} />
     </View>
   </Card>
 );

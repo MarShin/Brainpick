@@ -24,18 +24,11 @@ const taskTypeToDisplayName = (type) => {
 
 type Props = { navigation: any, task: any };
 
-class LatestTaskItem extends React.Component<Props> {
-  onTaskSelect = () => {
-    this.props.navigation.navigate('Task', { id: this.props.task.id });
-  };
-
+class FinishedTaskItem extends React.Component<Props> {
   render() {
     const { task } = this.props;
     return (
-      <Card
-        style={{ marginHorizontal: 16, marginBottom: 8 }}
-        onPress={this.onTaskSelect}
-      >
+      <Card style={{ marginHorizontal: 16, marginBottom: 8 }}>
         <View style={{ flexDirection: 'row' }}>
           <CardContent style={{ flex: 1, paddingVertical: 10 }}>
             <Title style={{ fontSize: 20, lineHeight: 26 }}>{task.name}</Title>
@@ -60,4 +53,4 @@ class LatestTaskItem extends React.Component<Props> {
   }
 }
 
-export default withNavigation(LatestTaskItem);
+export default withNavigation(FinishedTaskItem);

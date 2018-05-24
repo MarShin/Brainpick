@@ -8,6 +8,7 @@ import { compose } from 'recompose';
 
 import Background from '../components/Background';
 import Instructions from '../components/Instructions';
+import MarketingSurvey from '../components/MarketingSurvey';
 import ImageTagging from '../components/ImageTagging';
 import Rewards from '../components/Rewards';
 import { PageHeading } from '../components/Headings';
@@ -25,6 +26,8 @@ class Task extends React.Component<Props> {
         switch (task.type) {
           case 'IMAGE_TAGGING':
             return <ImageTagging task={task} />;
+          case 'MARKETING_SURVEY':
+            return <MarketingSurvey task={task} />;
           default:
             return null;
         }
@@ -63,7 +66,10 @@ export default compose(
     { navigation }
   ) => ({
     currentTask,
-    task: tasks && tasks[navigation.getParam('id', '')],
+    task: tasks && {
+      ...tasks[navigation.getParam('id', '')],
+      id: navigation.getParam('id', '')
+    },
     navigation
   }))
 )(Task);

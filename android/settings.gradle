@@ -1,4 +1,14 @@
 rootProject.name = 'Brainpick'
+include ':react-native-camera'
+project(':react-native-camera').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-camera/android')
+include ':react-native-audio-toolkit'
+project(':react-native-audio-toolkit').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-audio-toolkit/android')
+include ':react-native-notifications'
+project(':react-native-notifications').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-notifications/android')
+include ':react-native-camera-kit'
+project(':react-native-camera-kit').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-camera-kit/android')
+include ':react-native-audio'
+project(':react-native-audio').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-audio/android')
 include ':react-native-splash-screen'
 project(':react-native-splash-screen').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-splash-screen/android')
 include ':react-native-fbsdk'

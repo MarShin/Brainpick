@@ -1,7 +1,6 @@
 // @flow
 import { AccessToken, LoginManager } from 'react-native-fbsdk';
 import firebase from 'react-native-firebase';
-import { getFirebase } from 'react-redux-firebase';
 
 const loginWithFb = async () => {
   try {
@@ -26,7 +25,6 @@ const loginWithFb = async () => {
   } catch (e) {
     console.log(e);
   }
-  getFirebase().updateProfile({ history: [], balance: 0.0 });
 };
 
 export default loginWithFb;

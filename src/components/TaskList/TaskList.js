@@ -31,11 +31,11 @@ const TaskList = ({ latestTasks }) => {
     <SectionList
       renderSectionHeader={renderSectionHeader}
       sections={[
-        {
-          title: 'Popular',
-          data: [{ popularTasks }],
-          renderItem: renderPopular
-        },
+        // {
+        //   title: 'Popular',
+        //   data: [], // { popularTasks }
+        //   renderItem: renderPopular
+        // },
         { title: 'Latest', data: latestTasks, renderItem: renderLatest }
       ]}
       keyExtractor={(item, index) => item + index}
@@ -47,5 +47,9 @@ const TaskList = ({ latestTasks }) => {
 
 export default compose(
   firestoreConnect(['tasks']),
-  connect(({ firestore: { ordered } }) => ({ latestTasks: ordered.tasks }))
+  connect(({ firebase: { profile: p }, firestore: { ordered } }) => ({
+    latestTasks: ordered.tasks
+      ? ordered.tasks.filter(t => p.history && !p.history.includes(t.id))
+      : []
+  }))
 )(TaskList);

@@ -19,10 +19,7 @@ export default class ImageTagging extends React.Component<Props> {
         <Image
           style={{ height: 320 }}
           resizeMode="cover"
-          source={{
-            uri: this.props.task.payload.images[0],
-            cache: 'force-cache'
-          }}
+          source={{ uri: this.props.task.payload.images[0] }}
         />
         <View style={{ marginHorizontal: 16, marginTop: 16 }}>
           {this.props.task.payload.options.map(option => (

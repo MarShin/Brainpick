@@ -20,6 +20,7 @@ const currentTaskReducer = (state = initialState, action = {}) => {
     case 'UPDATE_CURRENT_TASK_RESPONSE':
       return { ...initialState, ...newState };
     case 'FINISH_CURRENT_TASK':
+      return initialState;
     default:
       return state;
   }

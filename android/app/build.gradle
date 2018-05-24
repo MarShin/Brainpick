@@ -147,6 +147,11 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-camera')
+    compile project(':react-native-audio-toolkit')
+    compile project(':react-native-notifications')
+    compile project(':react-native-camera-kit')
+    compile project(':react-native-audio')
     compile project(':react-native-splash-screen')
     compile project(':react-native-fbsdk')
     compile project(':react-native-vector-icons')

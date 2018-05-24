@@ -53,8 +53,12 @@ class StepBar extends React.Component<Props> {
   onPressNext = () => {
     if (this.props.currentTask.step >= 2) {
       this.props.firebase.updateProfile({
-        balance: this.props.profile.balance + this.props.task.rewardPerItem,
-        history: [...this.props.profile.history, this.props.task.id]
+        balance: this.props.profile.balance
+          ? this.props.profile.balance + this.props.task.rewardPerItem
+          : this.props.task.rewardPerItem,
+        history: this.props.profile.history
+          ? [...this.props.profile.history, this.props.task.id]
+          : [this.props.task.id]
       });
       this.props.finishCurrentTask();
       this.props.navigation.navigate('HomeNavigator');
