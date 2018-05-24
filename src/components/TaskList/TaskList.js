@@ -1,15 +1,16 @@
 // @flow
 import * as React from 'react';
-import { SectionList, FlatList } from 'react-native';
+import { SectionList } from 'react-native';
+import { connect } from 'react-redux';
+import { firestoreConnect, isLoaded } from 'react-redux-firebase';
+import { compose } from 'recompose';
 
 import { SectionHeading } from '../Headings';
-import PopularTaskItem from './PopularTaskItem';
+import PopularTaskList from './PopularTaskList';
 import LatestTaskItem from './LatestTaskItem';
 import styles from './styles';
 
-type SectionInfo = {
-  section: { title: string }
-};
+type SectionInfo = { section: { title: string } };
 
 const renderSectionHeader = (sectionInfo: SectionInfo) => (
   <SectionHeading>{sectionInfo.section.title}</SectionHeading>
@@ -17,30 +18,34 @@ const renderSectionHeader = (sectionInfo: SectionInfo) => (
 
 const popularTasks = ['item1', 'item2'];
 const renderPopular = (props: { item: { popularTasks: Array<string> } }) => (
-  <FlatList
-    data={props.item.popularTasks}
-    renderItem={({ item }) => <PopularTaskItem>{item}</PopularTaskItem>}
-    keyExtractor={(item, index) => item + index}
-    style={styles.popularTaskList}
-    showsHorizontalScrollIndicator={false}
-    horizontal
-  />
+  <PopularTaskList popularTasks={props.item.popularTasks} />
 );
 
-const latestTasks = ['item3', 'item4'];
-const renderLatest = ({ item }: { item: string }) => <LatestTaskItem>{item}</LatestTaskItem>;
-
-const TaskList = () => (
-  <SectionList
-    renderSectionHeader={renderSectionHeader}
-    sections={[
-      { title: 'Popular', data: [{ popularTasks }], renderItem: renderPopular },
-      { title: 'Latest', data: latestTasks, renderItem: renderLatest }
-    ]}
-    keyExtractor={(item, index) => item + index}
-    style={styles.list}
-    stickySectionHeadersEnabled={false}
-  />
+const renderLatest = ({ item }: { item: { name: string } }) => (
+  <LatestTaskItem task={item} />
 );
 
-export default TaskList;
+const TaskList = ({ latestTasks }) => {
+  if (!isLoaded(latestTasks)) return null;
+  return (
+    <SectionList
+      renderSectionHeader={renderSectionHeader}
+      sections={[
+        {
+          title: 'Popular',
+          data: [{ popularTasks }],
+          renderItem: renderPopular
+        },
+        { title: 'Latest', data: latestTasks, renderItem: renderLatest }
+      ]}
+      keyExtractor={(item, index) => item + index}
+      style={styles.list}
+      stickySectionHeadersEnabled={false}
+    />
+  );
+};
+
+export default compose(
+  firestoreConnect(['tasks']),
+  connect(({ firestore: { ordered } }) => ({ latestTasks: ordered.tasks }))
+)(TaskList);

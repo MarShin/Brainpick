@@ -1,48 +1,43 @@
 // @flow
-import React from 'react';
 import { createSwitchNavigator, createStackNavigator } from 'react-navigation';
 import createMaterialBottomTabNavigator from 'react-navigation-material-bottom-tabs/createMaterialBottomTabNavigator';
-import { Icon } from 'react-native-elements';
+
+import { createMaterialIcon } from '../utils/createIcon';
 
 import Discover from '../screens/Discover';
-import CameraInstructions from '../screens/CameraInstructions';
+import Task from '../screens/Task';
 import Settings from '../screens/Settings';
 import Contributions from '../screens/Contributions';
-import Me from '../screens/Me';
 
-// Authentications
 import Loading from '../screens/Loading';
-import SignUp from '../screens/SignUp';
-import Login from '../screens/Login';
-import Main from '../screens/Main';
+import LogIn from '../screens/LogIn';
 
-export const DiscoverStack = createStackNavigator({
-  Discover: {
-    screen: Discover,
-    navigationOptions: {
-      header: () => null // specifies no object return for header, default white space
-    }
+export const DiscoverNavigator = createStackNavigator(
+  {
+    Discover
   },
-  CameraInstructions: {
-    screen: CameraInstructions,
-    navigationOptions: ({ navigation }) => ({
-      // navigation object automatically attached to screen
-      headerTitle: 'Camera Task'
-    })
+  {
+    headerMode: 'none'
   }
-});
+);
 
-type TabBarIconProps = { tintColor: string };
+export const SettingsNavigator = createStackNavigator(
+  {
+    Settings
+  },
+  {
+    headerMode: 'none'
+  }
+);
 
-export const Tabs = createMaterialBottomTabNavigator(
+export const HomeNavigator = createMaterialBottomTabNavigator(
   {
     Discover: {
-      screen: DiscoverStack,
+      screen: DiscoverNavigator,
       navigationOptions: {
         tabBarLabel: 'Discover',
-        tabBarIcon: ({ tintColor }: TabBarIconProps) => (
-          <Icon name="list" size={24} color={tintColor} />
-        ),
+        tabBarIcon: ({ tintColor }) =>
+          createMaterialIcon('explore', tintColor, 24),
         tabBarColor: '#374B57'
       }
     },
@@ -50,19 +45,17 @@ export const Tabs = createMaterialBottomTabNavigator(
       screen: Contributions,
       navigationOptions: {
         tabBarLabel: 'Contributions',
-        tabBarIcon: ({ tintColor }: TabBarIconProps) => (
-          <Icon name="account-balance" size={24} color={tintColor} />
-        ),
+        tabBarIcon: ({ tintColor }) =>
+          createMaterialIcon('account-balance', tintColor, 24),
         tabBarColor: '#374B57'
       }
     },
     Settings: {
-      screen: Me,
+      screen: SettingsNavigator,
       navigationOptions: {
         tabBarLabel: 'Settings',
-        tabBarIcon: ({ tintColor }: TabBarIconProps) => (
-          <Icon name="settings" size={24} color={tintColor} />
-        ),
+        tabBarIcon: ({ tintColor }) =>
+          createMaterialIcon('settings', tintColor, 24),
         tabBarColor: '#374B57'
       }
     }
@@ -80,26 +73,12 @@ export const Tabs = createMaterialBottomTabNavigator(
   }
 );
 
-export const SettingsStack = createStackNavigator({
-  Settings: {
-    screen: Settings,
-    navigationOptions: {
-      title: 'Settings'
-    }
-  }
-});
-
-export const AppStack = createStackNavigator(
+const AppNavigator = createStackNavigator(
   {
-    Tabs: {
-      screen: Tabs
-    },
-    Settings: {
-      screen: SettingsStack
-    }
+    HomeNavigator,
+    Task
   },
   {
-    mode: 'modal',
     headerMode: 'none'
   }
 );
@@ -107,9 +86,8 @@ export const AppStack = createStackNavigator(
 export const Root = createSwitchNavigator(
   {
     Loading,
-    SignUp,
-    Login,
-    AppStack
+    LogIn,
+    AppNavigator
   },
   {
     initialRouteName: 'Loading'

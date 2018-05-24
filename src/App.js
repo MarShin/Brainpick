@@ -1,11 +1,17 @@
 import React from 'react';
 import EStyleSheet from 'react-native-extended-stylesheet';
-import firebase from 'react-native-firebase';
+import { Provider as ReduxProvider } from 'react-redux';
+import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
+import { YellowBox } from 'react-native';
 
-import { Provider } from 'react-redux';
 import store from './config/store';
 import { Root } from './config/routes';
 import { AlertProvider } from './components/Alert';
+
+YellowBox.ignoreWarnings([
+  'Warning: isMounted(...) is deprecated',
+  'Module RCTImageLoader'
+]);
 
 EStyleSheet.build({
   $darkBlue: '#142026',
@@ -27,10 +33,23 @@ EStyleSheet.build({
   $inputText: '#797979'
 });
 
-export default () => (
-  <Provider store={store}>
-    <AlertProvider>
-      <Root />
-    </AlertProvider>
-  </Provider>
+const theme = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    primary: '#40A3E2',
+    accent: 'yellow'
+  }
+};
+
+const App = () => (
+  <ReduxProvider store={store}>
+    <PaperProvider theme={theme}>
+      <AlertProvider>
+        <Root />
+      </AlertProvider>
+    </PaperProvider>
+  </ReduxProvider>
 );
+
+export default App;

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { View, ScrollView, Image, Text } from 'react-native';
-import PropTypes from 'prop-types';
 
 import { Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -13,10 +12,6 @@ const instructions =
   'you wil blablabla blablabla sdfsdf blablabla blablabla blablabla blablabla blablabla';
 
 class Steps extends Component {
-  static propTypes = {
-    navigation: PropTypes.object,
-    alertWithType: PropTypes.func
-  };
   handlePressStart = () => {
     this.props.navigation.goBack(null);
     // this.props.alertWithType('error', 'Sorry!', "You can't proceed now");

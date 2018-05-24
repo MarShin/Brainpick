@@ -6,7 +6,7 @@ export default EStyleSheet.create({
     color: '#4a4a4a',
     fontSize: 32,
     fontWeight: 'bold',
-    paddingTop: 6,
+    paddingTop: 12,
     paddingHorizontal: 16
   },
   section: {
