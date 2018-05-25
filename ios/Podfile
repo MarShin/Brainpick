@@ -19,5 +19,9 @@ target 'Brainpick' do
   # pod 'Crashlytics', '~> 3.10.1
 
   # Add new pods below this line
+  pod 'react-native-notifications', :path => '../node_modules/react-native-notifications'
+
+  pod 'react-native-camera', :path => '../node_modules/react-native-camera'
+
 
 end
